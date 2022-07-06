@@ -1,8 +1,34 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 a {
-  color: #00B7FF;
+}
+
+.wrapper {
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 20px 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+.banner {
+  padding: 20px 20px;
+  background-color: beige;
+  height: 150px;
+  font-size: 24px;
+}
+
+.login-navigation-container {
+  margin: 16px 0;
+  height: 68px;
 }
