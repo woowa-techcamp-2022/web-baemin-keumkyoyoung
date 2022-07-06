@@ -1,3 +1,15 @@
+:root {
+  --text-gray: rgba(100, 100, 100, 0.5);
+  --border-gray: rgba(100, 100, 100, 0.5);
+  --bg-main: rgb(93, 190, 187);
+  --text-main: rgb(93, 190, 187);
+  --text-gray: #999;
+  --text-error: #ff3333;
+
+  /* size */
+  --content-padding: 20px;
+}
+
 body {
   height: 100%;
 }
@@ -6,18 +18,19 @@ html {
   height: 100%;
 }
 
-a {
-}
-
 .wrapper {
   height: 100%;
   max-width: 500px;
   margin: 0 auto;
+  border: 0.5px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   padding: 20px 0;
   font-size: 32px;
+  width: 100%;
   text-align: center;
 }
 
@@ -31,4 +44,62 @@ a {
 .login-navigation-container {
   margin: 16px 0;
   height: 68px;
+}
+
+.user-input {
+  padding: 8px 0;
+}
+.input-container:last-of-type {
+}
+
+.user-input::placeholder {
+  color: var(--text-gray);
+}
+
+.close-btn {
+  height: 14px;
+  width: 14px;
+}
+
+.submit-btn {
+  background-color: var(--bg-main);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.user-input:focus {
+  border-bottom: 0.5px solid black;
+}
+
+.mo-header {
+  padding: var(--content-padding);
+}
+
+.submit-form {
+  margin-top: 70px;
+}
+
+.info-text {
+}
+.sign-up-navigation {
+  text-decoration: none;
+  color: var(--bg-main);
+}
+
+.login-footer {
+  padding: var(--content-padding);
+  font-size: 14px;
+  text-align: center;
+  color: rgba(100, 100, 100, 1);
+}
+
+.error-msg {
+  visibility: hidden;
+  font-size: 12px;
+  color: var(--text-error);
+  padding-top: 8px;
 }

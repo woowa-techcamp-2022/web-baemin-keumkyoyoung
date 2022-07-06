@@ -1,7 +1,36 @@
 extends layout
 
 block content
-  h1.title= title 
+  div(class="flex-1")
+    header(class="flex-between px-content mo-header")
+      div(class="close-btn flex-center items-center" ,role="button" )
+        img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
+
+    form(class="flex-col px-content submit-form" )
+      label(class="flex  input-container flex-col")
+        input(class="w-full user-input border-b-gray  ",placeholder="아이디 또는 이메일")
+        p(class="error-msg .js-id-empty-msg") 아이디를 입력해주세요
+      label(class="flex input-container flex-col")
+        input(class="w-full user-input border-b-gray ", placeholder="비밀번호")
+        p(class="error-msg .js-password-empty-msg") 패스워드를 입력해주세요
+      button(class="submit-btn") 로그인
+
+    //- ul(class="find-user-info-btns")
+    //-   li
+    //-     a(href="") 아이디 찾기
+      
+    //-   li 
+    //-     a(href="") 비밀 번호 찾기
+  footer(class="login-footer")
+    p(class="info-text")  혹시, 배달의민족이 처음이신가요? 
+      a(class="sign-up-navigation" href="") 회원가입
+  script(src="/javascripts/login.js") 
+  
+
+
+      
+    
+  
               
 
     
