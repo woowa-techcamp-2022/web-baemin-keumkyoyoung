@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: "My 배민" });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: "로그인" });
+});
+
+
 module.exports = router;
