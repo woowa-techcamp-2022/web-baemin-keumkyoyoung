@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.title= title 
+  img(src="/images/banner.png", class="w-full" alt="", srcset="")
+  div(class="login-navigation-container")
+    a(href='/login')
+      div(class=["flex-between","items-center", "content-padding" ,"text-gray", "h-full" ])
+        img(src="/images/profile.png", alt="profile", srcset="" class="h-full")
+        div(class="text-lg")  로그인 해주세요    
+        div(class="flex-center")
+          span(class="text-lg")  >
+              
+
+    
+  

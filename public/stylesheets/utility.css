@@ -1,0 +1,36 @@
+/* layout */
+
+.content-padding {
+  padding: 0 20px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+/* color */
+
+.text-gray {
+  color: #666;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* font-size */
+.text-lg {
+  font-size: 24px;
+}
+
+.text-xl {
+  font-size: 32px;
+}
