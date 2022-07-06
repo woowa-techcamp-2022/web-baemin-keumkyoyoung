@@ -29,8 +29,7 @@ html {
 
 .title {
   padding: 20px 0;
-  font-size: 32px;
-  width: 100%;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -38,18 +37,23 @@ html {
   padding: 20px 20px;
   background-color: beige;
   height: 150px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .login-navigation-container {
   margin: 16px 0;
-  height: 68px;
+  height: 56px;
 }
 
 .user-input {
   padding: 8px 0;
+  /* border-bottom: 0.5px solid var(--border-gray); */
 }
 .input-container:last-of-type {
+  margin-top: 12px;
+}
+.input-container {
+  border-bottom: 0.5px solid var(--border-gray);
 }
 
 .user-input::placeholder {
@@ -68,7 +72,7 @@ html {
   color: white;
   padding: 10px 0;
   font-size: 16px;
-  margin-top: 12px;
+  margin-top: 24px;
 }
 
 .user-input:focus {
@@ -99,7 +103,10 @@ html {
 
 .error-msg {
   visibility: hidden;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-error);
   padding-top: 8px;
+}
+.error-input {
+  border-bottom: 0.5px solid var(--text-error);
 }
