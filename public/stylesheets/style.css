@@ -17,7 +17,7 @@ a {
 
 .title {
   padding: 20px 0;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -25,10 +25,10 @@ a {
   padding: 20px 20px;
   background-color: beige;
   height: 150px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .login-navigation-container {
   margin: 16px 0;
-  height: 68px;
+  height: 56px;
 }
