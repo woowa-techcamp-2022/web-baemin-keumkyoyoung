@@ -259,3 +259,84 @@ html {
 .submit-btn[disabled] {
   background-color: rgba(100, 100, 100, 0.2);
 }
+
+.phone-form label div {
+}
+
+.phone-form {
+  /* padding-top: 24px; */
+  padding-bottom: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0px var(--content-padding);
+  color: var(--text-gray);
+  font-size: 14px;
+  /* justify-content: space-between; */
+}
+
+.phone-form input {
+  color: black;
+  width: 100%;
+  border-bottom: var(--border-gray) solid 0.5px;
+  padding: 8px 0;
+}
+.phone-form .phone-input-container {
+  position: relative;
+  margin-top: 24px;
+}
+
+.phone-form .phone-input-container + .phone-input-container {
+  margin-bottom: 24px;
+}
+.certification-receiver {
+  width: 100%;
+  text-align: center;
+  /* background-color: var(--bg-main); */
+  border: 0.5px solid var(--border-gray);
+  border-radius: 4px;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.resend-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resend {
+  color: var(--text-main);
+  display: inline;
+  text-align: center;
+}
+
+.next-btn {
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.check-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 8px;
+  right: 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/images/check-inactive.png");
+}
+.x-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 8px;
+  right: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/images/close-circle.png");
+}
+
+.next-btn[disabled] {
+  color: var(--text-gray);
+}

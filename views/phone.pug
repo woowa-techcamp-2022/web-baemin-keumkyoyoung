@@ -5,4 +5,20 @@ block content
         a(href="/" class="close-btn flex-center items-center" ,role="button" )
           img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
         h1.title= title 
-        div(href="/", class="close-btn" ,role="layout" )
+        button.next-btn(href="/" ,role="layout" disabled) 다음
+
+    form(class="phone-form")
+        div.phone-input-container 
+            label 
+                div 휴대전화
+                input 
+            div.check-icon
+            div.x-icon
+        div.phone-input-container 
+            label 
+                div 인증번호
+                input 
+        div.resend-container       
+            button.resend 인증번호 다시받기
+        button.certification-receiver 인증번호 받기
+    
