@@ -34,6 +34,7 @@ const activePhoneForm = (form, certificationReceiverBtn, nextNavigation) => {
       onChange: (isValid) => {
         // if (!certificationReceiverBtn) return;
         if (certificationReceiverBtn) {
+          console.log("btn", isValid);
           certificationReceiverBtn.classList.toggle("active", isValid);
         }
         nextNavigation.disabled = !isAllInputsValid();
@@ -93,7 +94,7 @@ const activePhoneForm = (form, certificationReceiverBtn, nextNavigation) => {
 
     nextNavigation.addEventListener("click", () => {
       if (isAllInputsValid()) {
-        window.location.replace("/");
+        window.location.replace("/sign_up/user");
       }
     });
   });

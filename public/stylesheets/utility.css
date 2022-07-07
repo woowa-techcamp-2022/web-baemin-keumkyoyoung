@@ -21,6 +21,10 @@
 .flex-1 {
   flex: 1;
 }
+
+.items-end {
+  align-items: flex-end;
+}
 .flex-col {
   display: flex;
   flex-direction: column;
