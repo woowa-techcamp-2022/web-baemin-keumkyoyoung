@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  h1.title= title 
+  header(class=" mo-header")
+      h1.title= title 
   img(src="/images/banner.png", class="w-full" alt="", srcset="")
   div(class="login-navigation-container")
     a(href='/login')

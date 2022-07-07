@@ -4,11 +4,38 @@
   padding: 0 20px;
 }
 
+.p-2 {
+  padding: 2px;
+}
+
+.px-4 {
+  padding: 16px;
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
 }
 
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
 .items-center {
   align-items: center;
 }
@@ -16,6 +43,13 @@
 .w-full {
   width: 100%;
 }
+
+/* padding */
+.px-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* color */
 
 .text-gray {
@@ -33,4 +67,9 @@
 
 .text-xl {
   font-size: 24px;
+}
+
+/* border */
+.border-b-gray {
+  border-bottom: 0.5px solid rgba(100, 100, 100, 0.5);
 }
