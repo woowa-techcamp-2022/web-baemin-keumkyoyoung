@@ -1,6 +1,7 @@
 // TODO 구현해야됨
-const signin = async () => {
-  return True;
+import { postData } from "./util.js";
+const signin = async (data) => {
+  await postData("/api/login", data);
 };
 
 const isEmptyValue = (string) => string === "";
@@ -45,9 +46,12 @@ const onSubmitHandler = async (event) => {
   // validate통과 못하면 error message
 
   try {
-    const result = await signin();
+    const result = await signin({ email: id.value, password: password.value });
+    alert(result);
+    window.location.replace("/");
   } catch (error) {}
   // signup
+  console.log(error);
 };
 
 const activateValidator = (formElement) => {

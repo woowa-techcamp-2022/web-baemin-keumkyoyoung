@@ -1,4 +1,4 @@
-import { CustomInput, renderComponent, formatDate } from "./util.js";
+import { CustomInput, postData, renderComponent, formatDate } from "./util.js";
 
 const passwordValidate = (value) => {
   // 10자 이상, 대문자,소문자,숫자, 특수문자중 2종류 조합
@@ -40,12 +40,6 @@ const passwordValidate = (value) => {
     }
     return true;
   }
-};
-
-const birthValidate = (value) => {
-  let yourDate = new Date();
-
-  yourDate.toISOString();
 };
 
 const activeUserForm = (form, certificationReceiverBtn, nextNavigation) => {
@@ -155,9 +149,15 @@ const activeUserForm = (form, certificationReceiverBtn, nextNavigation) => {
     });
 
     // request and server로 전송
-    nextNavigation.addEventListener("click", () => {
+    nextNavigation.addEventListener("click", async () => {
       if (isAllInputsValid()) {
-        window.location.replace("/sign_up/user");
+        const data = {
+          email: form.email.value,
+          password: form.password.value,
+          nickname: form.nickname.value,
+        };
+        const result = await postData("/api/user", data);
+        window.location.replace("/");
       }
     });
   });

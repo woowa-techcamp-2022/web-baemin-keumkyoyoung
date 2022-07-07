@@ -95,3 +95,15 @@ export function formatDate(date) {
 
   return [year, month, day].join("");
 }
+
+export async function postData(url = "", data = {}) {
+  // 옵션 기본 값은 *로 강조
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  return response.json(); // JSON 응답을 네이티브 JavaScript 객체로 파싱
+}
