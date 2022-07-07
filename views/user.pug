@@ -15,27 +15,5 @@ block content
                     div.check-icon
                     div.x-icon
                 button.duplicate-btn 중복확인
-
-             
-            
-        div.input-controller(data-input-id="nickname")  
-            label 
-                div 닉네임
-                input(id="nickname" ,type="text" ,name="nickname", )
-            div.check-icon
-            div.x-icon
-        div.input-controller.has-error-message(data-input-id="password")  
-            label 
-                div 비밀번호
-                input(id="password" ,type="tel" ,name="password", maxlength="13")
-            div.check-icon
-            div.x-icon
-        p(class="error-msg .js-id-empty-msg") 비밀번호를 입력해주세요
-        div.input-controller(data-input-id="birth")  
-            label 
-                div 생년월일
-                input(id="birth" ,type="number" ,name="birth", pattern="[0-9]*")
-            div.check-icon
-            div.x-icon
-    script(src="/scripts/phone.js",type="module") 
+    script(src="/scripts/user.js",type="module") 
     
