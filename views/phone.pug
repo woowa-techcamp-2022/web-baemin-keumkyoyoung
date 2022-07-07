@@ -2,23 +2,18 @@ extends layout
 
 block content
     header(class=" mo-header")
-        a(href="/" class="close-btn flex-center items-center" ,role="button" )
-          img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
+        a(href="/" class="left-arrow flex-center items-center" ,role="button" )
+          img(src="/images/arrow-left.png" , class="left-arrow" alt="", srcset="")
         h1.title= title 
         button.next-btn(href="/" ,role="layout" disabled) 다음
 
     form(class="phone-form")
-        div.phone-input-container 
+        div.input-controller(data-input-id="phone")  
             label 
                 div 휴대전화
-                input 
+                input(id="phone" ,type="tel" ,name="phone", maxlength="13")
             div.check-icon
             div.x-icon
-        div.phone-input-container 
-            label 
-                div 인증번호
-                input 
-        div.resend-container       
-            button.resend 인증번호 다시받기
         button.certification-receiver 인증번호 받기
+    script(src="/scripts/phone.js",type="module") 
     

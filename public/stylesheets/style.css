@@ -265,8 +265,6 @@ html {
 
 .phone-form {
   /* padding-top: 24px; */
-  padding-bottom: 24px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   margin: 0px var(--content-padding);
@@ -281,12 +279,13 @@ html {
   border-bottom: var(--border-gray) solid 0.5px;
   padding: 8px 0;
 }
-.phone-form .phone-input-container {
+
+.input-controller {
   position: relative;
-  margin-top: 24px;
+  margin: 24px 0;
 }
 
-.phone-form .phone-input-container + .phone-input-container {
+.input-controller + .input-controller {
   margin-bottom: 24px;
 }
 .certification-receiver {
@@ -297,12 +296,14 @@ html {
   border-radius: 4px;
   padding: 10px 0;
   font-size: 16px;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .resend-container {
   display: flex;
+  padding: 0 var(--content-padding);
   justify-content: flex-end;
+  font-size: 14px;
 }
 
 .resend {
@@ -334,9 +335,27 @@ html {
   right: 28px;
   background-size: contain;
   background-repeat: no-repeat;
+  visibility: hidden;
   background-image: url("/images/close-circle.png");
+}
+
+.check-icon.active {
+  background-image: url("/images/check-active.png");
+}
+.x-icon.active {
+  visibility: visible;
 }
 
 .next-btn[disabled] {
   color: var(--text-gray);
+}
+
+.certification-receiver.active {
+  background-color: var(--bg-main);
+  color: white;
+}
+
+.left-arrow {
+  height: 16px;
+  width: 16px;
 }
