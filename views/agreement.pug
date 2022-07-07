@@ -1,7 +1,12 @@
 extends layout
 
 block content
-  h1.title= title 
+  header(class=" mo-header")
+      a(href="/" class="close-btn flex-center items-center" ,role="button" )
+        img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
+      h1.title= title 
+      //- a(href="/", class="next-navigation unactive  flex-center items-center" ,role="button" )  완료
+       
   img(src="/images/banner.png", class="w-full" alt="", srcset="")
   div(class="login-navigation-container")
     a(href='/login')

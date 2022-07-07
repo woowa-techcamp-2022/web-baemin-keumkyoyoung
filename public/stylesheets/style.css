@@ -28,8 +28,8 @@ html {
 }
 
 .title {
-  padding: 20px 0;
-  font-size: 24px;
+  font-size: 18px;
+  flex: 1;
   text-align: center;
 }
 
@@ -66,6 +66,7 @@ html {
 }
 
 .submit-btn {
+  text-align: center;
   background-color: var(--bg-main);
   border-radius: 4px;
   border: none;
@@ -81,6 +82,9 @@ html {
 
 .mo-header {
   padding: var(--content-padding);
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .submit-form {
@@ -109,4 +113,7 @@ html {
 }
 .error-input {
   border-bottom: 0.5px solid var(--text-error);
+}
+
+.sign-up-header {
 }

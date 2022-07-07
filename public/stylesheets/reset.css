@@ -140,3 +140,7 @@ input {
 input:focus {
   outline: none;
 }
+button {
+  all: unset;
+  cursor: pointer;
+}
