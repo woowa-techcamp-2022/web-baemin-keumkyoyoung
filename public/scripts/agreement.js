@@ -30,7 +30,8 @@ const activeAgreementForm =(form,selectedAllCheckbox)=>{
             submitBtn.disabled = false
         })
     }
-
+    // reload됐을 때 input 값이 저장된다. 초기에 onChangeHandler 실행 
+    onChnageHandler()
     selectedAllCheckbox.addEventListener('change', toggleAll )
     form.addEventListener('change',onChnageHandler)
 }
