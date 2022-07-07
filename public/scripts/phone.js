@@ -93,7 +93,7 @@ const activePhoneForm = (form, certificationReceiverBtn, nextNavigation) => {
 
     nextNavigation.addEventListener("click", () => {
       if (isAllInputsValid()) {
-        window.location.replace("/");
+        window.location.replace("/sign_up/user");
       }
     });
   });

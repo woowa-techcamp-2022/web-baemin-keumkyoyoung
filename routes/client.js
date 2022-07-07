@@ -18,4 +18,8 @@ router.get("/sign_up/phone", function (req, res, next) {
   res.render("phone", { title: "회원가입" });
 });
 
+router.get("/sign_up/user", function (req, res, next) {
+  res.render("user", { title: "회원가입" });
+});
+
 module.exports = router;
