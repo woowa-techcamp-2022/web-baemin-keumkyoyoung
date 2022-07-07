@@ -1,21 +1,56 @@
 extends layout
 
 block content
-  header(class=" mo-header")
-      a(href="/" class="close-btn flex-center items-center" ,role="button" )
-        img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
-      h1.title= title 
-      //- a(href="/", class="next-navigation unactive  flex-center items-center" ,role="button" )  완료
-       
-  img(src="/images/banner.png", class="w-full" alt="", srcset="")
-  div(class="login-navigation-container")
-    a(href='/login')
-      div(class=["flex-between","items-center", "content-padding" ,"text-gray", "h-full" ])
-        img(src="/images/profile.png", alt="profile", srcset="" class="h-full")
-        div(class="text-lg")  로그인 해주세요    
-        div(class="flex-center")
-          span(class="text-lg")  >
+  div(class="flex-1")
+    header(class=" mo-header")
+        a(href="/" class="close-btn flex-center items-center" ,role="button" )
+          img(src="/images/close.svg" , class="close-btn" alt="", srcset="")
+        h1.title= title 
+        div(href="/", class="close-btn" ,role="layout" )
+    div(class="info px-content") 
+        p 어서오세요
+        p 약관동의가 필요해요
+    div(class="flex items-center px-content select-all")
+        label(for="select-all" ,class="checkbox-container") 전체동의
+          input(type="checkbox",id="select-all" ,name="select-all", checked )
+          span(class="checkmark")
+    
+      
+    form(class="agreement-form") 
+      -var infos = [{ name: "배달의민족 이용약관 동의", required: true ,isDescription:true},{ name: "전자금융거래 이용약관 동의", required: true ,isDescription:true},{ name: "개인정보 수집이용 동의", required: true,isDescription:true },{ name: "개인정보 제3자 제공 동의 (선택)", required: false ,isDescription:true},{ name: "마케팅 정보 메일, SMS 수신동의 (선택)", required: false ,isDescription:false},]
+        each val,index in infos
+          div(class="flex items-center")
+            label(for=index ,class="checkbox-container")= val.name
+              input(type="checkbox",id=index ,name=index , required=val.required===true )
+              span(class="checkmark")
+            if val.isDescription
+              span.arrow >
+
+    div(class="px-content flex-col select-container ")
+        div(class="age-radio-container")
+          img(src="/images/age-over.png", class="age-image" alt="", srcset="")
+          label(for="up" class="radio-container") 
+            strong 만 14세 이상입니다. 
+
+            input(type="radio", id="up", name="age", value="up" ) 
+            span(class="radio-checkmark")
+        div(class="age-radio-container")
+          img(src="/images/age-under.png", class="age-image" alt="", srcset="")
+
+          label(for="down" class="radio-container") 
+            div(class="flex-col") 
+              strong 만 14세 미만입니다. 
+              span 보호자의 동의가 필요합니다.
+
+            input(type="radio", id="down", name="age", value="up" ) 
+            span(class="radio-checkmark")
+
+  div(class="login-footer")
+    button(class="submit-btn") 다음으로
+    
+  
+  script(src="/scripts/agreement.js") 
+
               
 
     
-  
