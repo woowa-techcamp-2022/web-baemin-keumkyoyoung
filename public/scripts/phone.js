@@ -34,6 +34,7 @@ const activePhoneForm = (form, certificationReceiverBtn, nextNavigation) => {
       onChange: (isValid) => {
         // if (!certificationReceiverBtn) return;
         if (certificationReceiverBtn) {
+          console.log("btn", isValid);
           certificationReceiverBtn.classList.toggle("active", isValid);
         }
         nextNavigation.disabled = !isAllInputsValid();

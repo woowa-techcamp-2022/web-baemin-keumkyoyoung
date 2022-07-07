@@ -14,6 +14,14 @@ export function CustomInput(inputID, { format, validate, onChange }) {
     icon.classList.toggle("active", isValid);
   };
 
+  const toggleError = () => {
+    if (!errorMsg || !errorMsg.classList.contains("error-msg")) {
+      return;
+    }
+
+    toggleActiveIcon(errorMsg, !isValid);
+  };
+
   const handleInputValue = (value) => {
     const formattedValue = format ? format(value) : value;
     inputElement.value = formattedValue;
@@ -21,14 +29,14 @@ export function CustomInput(inputID, { format, validate, onChange }) {
     onChange && onChange(isValid);
     toggleActiveIcon(checkIcon, isValid);
     toggleActiveIcon(xIcon, inputElement.value !== 0);
-    errorMsg && toggleActiveIcon(errorMsg, !isValid);
+    toggleError();
   };
 
   const a = xIcon.addEventListener("click", () => {
     inputElement.value = "";
     toggleActiveIcon(xIcon, false);
     toggleActiveIcon(checkIcon, false);
-    errorMsg && toggleActiveIcon(errorMsg, true);
+    toggleError();
     isValid = false;
     onChange && onChange(isValid);
   });
