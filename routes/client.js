@@ -14,4 +14,8 @@ router.get("/sign_up/agreement", function (req, res, next) {
   res.render("agreement", { title: "회원가입" });
 });
 
+router.get("/sign_up/phone", function (req, res, next) {
+  res.render("phone", { title: "회원가입" });
+});
+
 module.exports = router;
