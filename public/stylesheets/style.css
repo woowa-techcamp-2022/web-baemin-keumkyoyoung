@@ -119,12 +119,11 @@ html {
 .agreement-form {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-top: 0.5px solid var(--text-gray);
-  border-bottom: 0.5px solid var(--text-gray);
+  flex: 1;
   display: flex;
   flex-direction: column;
   margin: 0px var(--content-padding);
-  gap: 24px;
+  justify-content: space-between;
 }
 
 .checkbox-container input {
@@ -184,10 +183,6 @@ html {
   color: var(--text-gray);
 }
 
-.select-all {
-  padding-bottom: 16px;
-}
-
 .radio-container {
   height: 20px;
   position: relative;
@@ -245,6 +240,22 @@ html {
   top: 0;
 }
 
+.line {
+  height: 0.2px;
+  background-color: var(--border-gray);
+  margin: 0;
+}
 .age-radio-container span {
   font-size: 14px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.submit-btn[disabled] {
+  background-color: rgba(100, 100, 100, 0.2);
 }

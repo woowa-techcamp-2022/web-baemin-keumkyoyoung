@@ -1,15 +1,42 @@
-document.querySelector("form").elements[0].addEventListener("click", (e) => {
-  console.log(e.target);
-});
+const activeAgreementForm =(form,selectedAllCheckbox)=>{
+    const allCheckBoxs = [...form.querySelectorAll('input')].filter(input=>input.type==="checkbox")
+    const submitBtn= form.querySelector('button')
 
-const form = document.querySelector("form");
-console.log(form);
+    const isAllChecked=()=> allCheckBoxs.every((input)=>input.checked)
+    const isAllRequiredCheck = ()=>allCheckBoxs.filter(input=> input.required ).every(input=>input.checked)
 
-const ab = [
-  { name: "배달의민족 이용약관 동의", required: true ,isDescription:true},
-  { name: "전자금융거래 이용약관 동의", required: true ,isDescription:true},
-  { name: "개인정보 수집이용 동의", required: true,isDescription:true },
-  { name: "개인정보 제3자 제공 동의 (선택)", required: false ,isDescription:true},
-  { name: "마케팅 정보 메일, SMS 수신동의 (선택)", required: false ,isDescription:false},
-];
-const a = [];
+    const onChnageHandler = (e)=>{
+        console.log(isAllChecked(allCheckBoxs),isAllRequiredCheck(allCheckBoxs))
+        if(isAllChecked()){
+            submitBtn.disabled = false
+            selectedAllCheckbox.checked = true
+            console.log(selectedAllCheckbox.checked)
+            return
+        }
+
+        if(isAllRequiredCheck()){
+            submitBtn.disabled = false
+            return
+         }
+
+        submitBtn.disabled = true
+        selectedAllCheckbox.checked = false
+    }
+
+
+    const toggleAll = ({target})=>{
+        allCheckBoxs.forEach((inputElement)=>{
+            inputElement.checked = target.checked
+            submitBtn.disabled = false
+        })
+    }
+
+    selectedAllCheckbox.addEventListener('change', toggleAll )
+    form.addEventListener('change',onChnageHandler)
+}
+
+window.addEventListener('load',()=>{
+    const form = document.querySelector('form')
+    const selectedAllInput = document.querySelector("#select-all")
+    activeAgreementForm(form,selectedAllInput)
+})
