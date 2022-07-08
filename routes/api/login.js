@@ -6,7 +6,6 @@ const { v4: uuidv4 } = require("uuid");
 var router = express.Router();
 
 /* GET users listing. */
-user;
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
 });
